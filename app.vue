@@ -84,11 +84,11 @@ const submitForm = async () => {
     }
     console.log('Attempting to send email to:', email.value);
 
-    // Enviar email de confirmação usando Axios
-    // const emailResult = await axios.post('api/send', {
-    //   email: email.value,
-    //   name: name.value
-    // })
+     //Enviar email de confirmação usando Axios
+     const emailResult = await axios.post('api/send', {
+       email: email.value,
+       name: name.value
+     })
 
     // Se chegou até aqui, sucesso
     submitSuccess.value = true
@@ -97,7 +97,7 @@ const submitForm = async () => {
 
     // Log opcional
     console.log('Documento criado com ID:', firestoreResult.id)
-    // console.log('Resultado do envio de email:', emailResult.data)
+     console.log('Resultado do envio de email:', emailResult.data)
   } catch (error) {
     // Tratamento de erro mais detalhado
     errorMessage.value = error.response?.data?.message || 
@@ -109,4 +109,3 @@ const submitForm = async () => {
   }
 }
 </script>
-

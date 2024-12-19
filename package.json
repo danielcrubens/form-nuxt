@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
-    "@vue-email/nuxt": "^0.8.19",
+    "@nuxtjs/dotenv": "^1.4.2",
     "axios": "^1.7.9",
     "firebase": "^10.14.1",
     "nuxt": "^3.14.1592",
@@ -20,5 +20,8 @@
     "vue": "latest",
     "vue-router": "latest",
     "vuefire": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue-email/nuxt": "^0.8.19"
   }
 }
