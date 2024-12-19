@@ -85,10 +85,13 @@ const submitForm = async () => {
     console.log('Attempting to send email to:', email.value);
 
      //Enviar email de confirmação usando Axios
-     const emailResult = await axios.post('api/send', {
-       email: email.value,
-       name: name.value
-     })
+     const { data: emailResult } = await useFetch('/api/send', {
+  method: 'POST',
+  body: {
+    email: email.value,
+    name: name.value
+  }
+})
 
     // Se chegou até aqui, sucesso
     submitSuccess.value = true

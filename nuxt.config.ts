@@ -14,13 +14,14 @@ export default defineNuxtConfig({
      // measurementId: process.env.FIREBASE_MEASUREMENT_ID,
     },
   },
-  /* nitro: {
-    preset: 'node-server'  // ou outro preset adequado ao seu caso 
-  }, */
-  /* ssr: true, */
-/*   routeRules: {
+  nitro: {
+    preset: 'node-server'
+  },
+  ssr: true,
+
+  routeRules: {
     '/api/**': { ssr: true }
-  }, */
+  },
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },
