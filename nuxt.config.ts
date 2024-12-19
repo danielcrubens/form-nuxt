@@ -3,21 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ["nuxt-vuefire", '@vue-email/nuxt'],
-  nitro: {
-    preset: 'netlify' // ou 'netlify', dependendo do seu host
-  },
-  
-  // Forçar SSR para todas as rotas API
-  routeRules: {
-    '/api/**': { 
-      cors: true,
-      headers: {
-        'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        'Access-Control-Allow-Origin': '*'
-      }
-    }
-  },
-
   vuefire: {
     config: {
       apiKey: process.env.FIREBASE_API_KEY,
@@ -29,6 +14,8 @@ export default defineNuxtConfig({
      // measurementId: process.env.FIREBASE_MEASUREMENT_ID,
     },
   },
+ 
+ ssr: true,
 
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
