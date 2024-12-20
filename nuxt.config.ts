@@ -19,20 +19,16 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
-  },
+  },  
   vueEmail: {
-    baseUrl: 'https://formnuxt.netlify.app/', // Ajuste para sua URL
-    templateDir: 'emails', // Diretório onde estão seus templates
+    autoImport: true,
+    baseUrl: process.env.NODE_ENV === 'production' 
+      ? 'https://seu-dominio.com' 
+      : 'http://localhost:3000',
+    templateDir: 'emails',
+    build: {
+      enabled: true
+    }
   },
-  
-  nitro: {
-    publicAssets: [
-      { 
-        dir: 'emails',
-        baseURL: '/emails',
-        maxAge: 60 * 60 * 24 * 365 // cache for 1 year
-      }
-    ]
-  }
   
 })
