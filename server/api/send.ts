@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     const { email, name } = await readBody(event)
 
     // Compila o template Vue com as props necessárias
-    const template = await useCompiler('welcome.vue', {
+    const template = await useCompiler('Welcome.vue', {
       props: {
         name,
         email
