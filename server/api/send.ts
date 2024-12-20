@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     const { email, name } = await readBody(event)
 
     // Compila o template Vue com as props necessárias
-    const template = await useCompiler('Welcome.vue', {
+    const template = await useCompiler('emails/Welcome.vue', {
       props: {
         name,
         email
@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
       from: 'Acme <comercial@servenc.com.br>',
       to: [email],
       subject: 'Confirmação de Cadastro',
-      html: template.html
+      html: template.html,
     }
 
     // Envia o email usando o Resend
