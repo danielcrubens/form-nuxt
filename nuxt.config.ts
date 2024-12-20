@@ -15,14 +15,17 @@ export default defineNuxtConfig({
     },
   },
  
-/*  ssr: true, */
+ ssr: true,
 
   runtimeConfig: {
+    runtimeCompiler: true,
+
     resendApiKey: process.env.RESEND_API_KEY
   },
-  /* nitro: {
+  nitro: {
     publicAssets: [
-      { dir: 'emails', baseURL: '/emails' }
+      { dir: 'emails', baseURL: '/emails' },
     ]
-  }, */
+  }
+  
 })
