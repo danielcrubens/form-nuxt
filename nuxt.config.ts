@@ -20,15 +20,4 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },  
-  vueEmail: {
-    autoImport: true,
-    baseUrl: process.env.NODE_ENV === 'production' 
-      ? 'https://seu-dominio.com' 
-      : 'http://localhost:3000',
-    templateDir: 'emails',
-    build: {
-      enabled: true
-    }
-  },
-  
 })
