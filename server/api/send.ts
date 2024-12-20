@@ -1,7 +1,6 @@
 // server/api/send.ts
 import { useCompiler } from '#vue-email'
 import { Resend } from 'resend'
-import path from 'path';
 
 // Inicializa o Resend com a chave API do ambiente
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -12,8 +11,7 @@ export default defineEventHandler(async (event) => {
     const { email, name } = await readBody(event)
 
     // Compila o template Vue com as props necessárias
-    const templatePath = path.resolve('emails/Welcome.vue');
-const template = await useCompiler(templatePath, {
+    const template = await useCompiler('Welcome.vue', {
       props: {
         name,
         email
