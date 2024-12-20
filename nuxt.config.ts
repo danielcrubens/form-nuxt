@@ -20,4 +20,21 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },
+  build: {
+    transpile: ['@vue-email/nuxt'],
+  },
+  nitro: {
+    prerender: {
+      routes: ['/', '/emails/Welcome.vue'],
+    },
+  },
+  hooks: {
+    'nitro:config'(nitroConfig) {
+      nitroConfig.publicAssets = nitroConfig.publicAssets || [];
+      nitroConfig.publicAssets.push({
+        dir: 'emails',
+        baseURL: '/emails',
+      });
+    },
+  },
 })
