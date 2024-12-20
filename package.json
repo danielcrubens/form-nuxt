@@ -12,13 +12,12 @@
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@nuxtjs/dotenv": "^1.4.2",
-    "@vue-email/compiler": "^0.8.14",
-    "@vue/server-renderer": "^3.5.13",
     "firebase": "^10.14.1",
     "nuxt": "^3.14.1592",
     "nuxt-vuefire": "^1.0.4",
     "resend": "^4.0.1",
     "vue": "latest",
+    "vue-email": "^0.8.11",
     "vue-router": "latest",
     "vuefire": "^3.2.0"
   },
