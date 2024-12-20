@@ -15,8 +15,8 @@ export default defineNuxtConfig({
     },
   },
  
- ssr: true,
-
+/*  ssr: true,
+ */
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },  
