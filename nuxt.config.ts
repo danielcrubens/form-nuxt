@@ -20,9 +20,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },
-  nitro: {
+  /* nitro: {
     publicAssets: [
       { dir: 'emails', baseURL: '/emails' }
     ]
-  },
+  }, */
 })
