@@ -20,9 +20,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   },
-  build: {
+ /*  build: {
     transpile: ['@vue-email/nuxt'],
-  },
+  }, */
   nitro: {
     prerender: {
       routes: ['/', '/emails/Welcome.vue'],
