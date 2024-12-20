@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ["nuxt-vuefire", '@vue-email/nuxt'],
+  modules: ["nuxt-vuefire", '@vue-email/nuxt','@nuxtjs/tailwindcss',  ],
   vuefire: {
     config: {
       apiKey: process.env.FIREBASE_API_KEY,

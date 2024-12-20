@@ -50,7 +50,6 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios'
 
 const { addDocument } = useFirestoreActions()
 
@@ -100,7 +99,7 @@ const submitForm = async () => {
 
     // Log opcional
     console.log('Documento criado com ID:', firestoreResult.id)
-     console.log('Resultado do envio de email:', emailResult.data)
+     console.log('Resultado do envio de email:', emailResult)
   } catch (error) {
     // Tratamento de erro mais detalhado
     errorMessage.value = error.response?.data?.message || 

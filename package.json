@@ -7,9 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs"
-
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
@@ -23,6 +21,7 @@
     "vuefire": "^3.2.0"
   },
   "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
     "@vue-email/nuxt": "^0.8.19"
   }
 }
