@@ -1,5 +1,4 @@
 // server/api/send.ts
-import { useCompiler } from '#vue-email'
 import { Resend } from 'resend'
 
 // Inicializa o Resend com a chave API do ambiente
@@ -8,23 +7,15 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export default defineEventHandler(async (event) => {
   try {
     // Recebe os dados do corpo da requisição
-    const { email, name } = await readBody(event)
-
-    // Compila o template Vue com as props necessárias
-    const template = await useCompiler('Welcome.vue', {
-      props: {
-        name,
-        email
-      }
-    })
+    const { email, name } = await readBody(event)   
 
     // Configura as opções do email
     const emailOptions = {
       from: 'Acme <comercial@servenc.com.br>',
       to: [email],
       subject: 'Confirmação de Cadastro',
-      html: template.html,
-      //      html: `<strong>Olá ${name}, seu cadastro foi realizado com sucesso!</strong>`,
+      html: `
+    <strong>Olá ${name}, seu cadastro foi realizado com sucesso!</strong>`,
     }
 
     // Envia o email usando o Resend
