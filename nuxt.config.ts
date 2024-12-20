@@ -18,13 +18,20 @@ export default defineNuxtConfig({
  ssr: true,
 
   runtimeConfig: {
-    runtimeCompiler: true,
-
     resendApiKey: process.env.RESEND_API_KEY
   },
+  vueEmail: {
+    baseUrl: 'https://formnuxt.netlify.app/', // Ajuste para sua URL
+    templateDir: 'emails', // Diretório onde estão seus templates
+  },
+  
   nitro: {
     publicAssets: [
-      { dir: 'emails', baseURL: '/emails' },
+      { 
+        dir: 'emails',
+        baseURL: '/emails',
+        maxAge: 60 * 60 * 24 * 365 // cache for 1 year
+      }
     ]
   }
   
