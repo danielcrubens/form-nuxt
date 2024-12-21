@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
             html: `<strong>Olá ${name}, seu cadastro foi realizado com sucesso!</strong>`,
     }
 
-    // Envia o email usando o Resend
+    // Envia o email usando o Resend ddscsdc
     const data = await resend.emails.send(emailOptions)
 
     return {
@@ -43,4 +43,4 @@ export default defineEventHandler(async (event) => {
       error: error.message
     }
   }
-})     
+})        
