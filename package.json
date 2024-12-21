@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build && cp -r ./node_modules/esbuild-linux-64 ./.netlify/functions-internal/server/node_modules/esbuild-linux-64",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

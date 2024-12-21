@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
       }
     })
 
-    // Configura as opções do email
+    // Configura as opções do emaildd
     const emailOptions = {
       from: 'Acme <comercial@servenc.com.br>',
       to: [email],
