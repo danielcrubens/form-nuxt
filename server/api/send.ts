@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
     // Recebe os dados do corpo da requisição
     const { email, name } = await readBody(event)
 
-    // Compila o template Vue com as props necessárias
+    // Compila o template Vue com as props necessáriasssds
     const template = await useCompiler('Welcome.vue', {
       props: {
         name,
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
       }
     })
 
-    // Configura as opções do emaildd
+    // Configura as opções do emaild
     const emailOptions = {
       from: 'Acme <comercial@servenc.com.br>',
       to: [email],
