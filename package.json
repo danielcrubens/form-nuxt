@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build && cp -r ./node_modules/esbuild-linux-64 ./.vercel/output/functions/__nitro.func/node_modules/esbuild-linux-64",
-
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -20,10 +19,10 @@
     "nuxt-vuefire": "^1.0.4",
     "resend": "^4.0.1",
     "vue": "latest",
-    "vue-email": "^0.8.1",
+    "vue-email": "^0.8.11",
     "vue-router": "latest",
     "vuefire": "^3.2.0",
-    "@vue-email/nuxt": "^0.8.1"
+    "@vue-email/nuxt": "^0.8.19"
 
   },
   "devDependencies": {
