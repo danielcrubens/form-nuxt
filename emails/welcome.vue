@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { ETailwind, EHtml, EHead, EBody, EContainer, EText, EImg, ESection, ELink } from 'vue-email'
+//import { ETailwind, EHtml, EHead, EBody, EContainer, EText, EImg, ESection, ELink } from 'vue-email'
 
 defineProps({
   name: {
