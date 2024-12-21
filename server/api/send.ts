@@ -2,7 +2,7 @@
 import { useCompiler } from '#vue-email'
 import { Resend } from 'resend'
    
-// Inicializa o Resend com a chave API do ambienteddd
+// Inicializa o Resend com a chave API do ambiente
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export default defineEventHandler(async (event) => {
